@@ -82,9 +82,16 @@
 
     /**
     * @desc SongPlayer.currentTime attribute
-    * @type (Object)
+    * @type (Number)
     **/
     SongPlayer.currentTime = null
+
+    /**
+    * @desc SongPlayer.currentVolume attribute
+    * @type (Number)
+    **/
+    SongPlayer.currentVolume = null
+
 
     /**
     *  @function SongPlayer.play
@@ -148,6 +155,16 @@
       }
     }
 
+
+    /**
+    *  @function SongPlayer.setCurrentVolume
+    *  @desc Public interface to set currentVolume from seekBar manipulation
+    **/
+    SongPlayer.setCurrentVolume = function (value) {
+      if (currentBuzzObject) {
+        SongPlayer.currentVolume = currentBuzzObject.setVolume(value).getVolume();
+      }
+    }
     return SongPlayer;
   }
 
