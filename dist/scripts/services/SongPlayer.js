@@ -42,6 +42,10 @@
 
       SongPlayer.currentSong = song;
       SongPlayer.currentAlbum = currentAlbum;
+
+      currentBuzzObject.bind('ended', function () {
+        SongPlayer.next();
+      });
     }
 
     /**
