@@ -34,6 +34,7 @@
     <div class="control-group volume">
       <span class="icon ion-volume-high"></span>
       <seek-bar value="{{playerBer.songPlayer.currentVolume || 80}}" max=100 on-change="playerBar.songPlayer.setCurrentVolume(value)"></seek-bar>
+      <input type="checkbox" class="toggle-mute" ng-click="playerBar.songPlayer.toggleMute()"><span class='small'>Mute</span>
     </div>
   </div>
 </section>

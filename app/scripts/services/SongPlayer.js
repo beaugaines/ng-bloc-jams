@@ -169,6 +169,16 @@
         SongPlayer.currentVolume = currentBuzzObject.setVolume(value).getVolume();
       }
     }
+
+    /**
+    *  @function SongPlayer.toggleMute
+    *  @desc Public interface to toggle sound
+    **/
+    SongPlayer.toggleMute = function () {
+      if (currentBuzzObject) {
+        currentBuzzObject.toggleMute();
+      }
+    }
     return SongPlayer;
   }
 
