@@ -165,6 +165,12 @@
         SongPlayer.currentVolume = currentBuzzObject.setVolume(value).getVolume();
       }
     }
+
+    SongPlayer.songTimer = function () {
+      if (currentBuzzObject) {
+        return buzz.toTimer(currentBuzzObject.getTime());
+      }
+    }
     return SongPlayer;
   }
 
